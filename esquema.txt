@@ -1,0 +1,14 @@
+{
+	"id": "f821a9704dfb4e34b2dcd3be7c4cf7d1",
+	"key": "f821a9704dfb4e34b2dcd3be7c4cf7d1",
+	"value": {
+		"rev": "1-95a4a9d7191ea72d44ded47387ce7621"
+		},
+	"doc": {
+		"_id": "f821a9704dfb4e34b2dcd3be7c4cf7d1",
+		"_rev": "1-95a4a9d7191ea72d44ded47387ce7621",
+		"type": "user",
+		"name": "manano",
+		"msg": "probando micro"
+		}
+}
