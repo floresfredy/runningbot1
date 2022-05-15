@@ -28,6 +28,12 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <title>Zona Admin</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="admin/estilo.css">
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -65,7 +71,7 @@
                                  <li class="nav-item">
                                     <a class="nav-link" href="nosotros.php"> NOSOTROS  </a>
                                  </li> 
-                                 <li class="nav-item active">
+                                 <li class="nav-item">
                                     <a class="nav-link" href="integrantes.php">INTEGRANTES</a>
                                  </li>
                                  <li class="nav-item">
@@ -87,46 +93,93 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- about -->
-      <div id="about"  class="about">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-9">
-                  <div class="titlepage">
-                     <h2>Jhonatan Jhoel Rivas Cure</h2>
-                     <span></span>
-                     <p>Breve descripción del integrante</p>
-                     <div class="bd-example">
-                        <div class="table-responsive">
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Distancia</th>
-                                <th scope="col">Tiempo</th>
-                                <th scope="col">Ritmo</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>100 metros</td>
-                                <td>33 segundos</td>
-                                <td>5.4</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                  </div>
+      <div class="ourwork">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-12">
+                   <div class="titlepage">
+                      <h2>Zona de Registro</h2>
+                   </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-12">
+                <div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card_register">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="images/profile.jpg" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+				
+					<form name="form1" method="post" action="index.php">
+                  
+						<div class="input-group mb-3">
+							<input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="Nombres" />
+						</div>
+
+                  <div class="input-group mb-3">
+                     <div class="input-group">
+                        <input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="Apellido Paterno" />
+                        <span class="input-group-addon">-</span>
+							   <input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="Apellido Materno" />
+                     </div>
+						</div>
+
+                  <div class="input-group mb-3">
+                     <div class="input-group">
+                        <input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="DNI" />
+                        <span class="input-group-addon">-</span>
+							   <select name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="Género">
+                           <option>Seleccione...</option>
+                           <option>Masculino</option>
+                           <option>Femenino</option>
+                        </select>
+                     </div>
+						</div>
+
+                  <div class="input-group mb-3">
+							<input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="Correo Electrónico" />
+						</div>
+
+                  <div class="input-group mb-3">
+                     <div class="input-group">
+                        <input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="18/05/2022" />
+                        <span class="input-group-addon">-</span>
+							   <input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="Celular" />
+                     </div>
+						</div>
+
+                  <div class="input-group mb-3">
+							<input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="Usuario" />
+						</div>
+
+                  <div class="input-group mb-3">
+							<input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="Contraseña" />
+						</div>
+
+
+						
+							<div class="d-flex justify-content-center mt-4 login_container">
+                <input type="submit" name="submit" value="Crear Cuenta" class="btn login_btn" />
+				   </div>
+               
+				   <div class="d-flex justify-content-center mt-3 login_container">
+                  <span><a href="index.php" style="color:#fff;">Regresar a Página Principal</a></span>
                </div>
-               <div class="col-md-3">
-                  <div class="about_img">
-                  <img src="images/jhonatan.jpeg" class="rounded-circle" alt="#"/>
-                  </div>
-               </div>
-            </div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+                </div>
+             </div>
          </div>
       </div>
+      
       <!-- end about -->
      
       <!--  footer -->

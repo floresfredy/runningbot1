@@ -28,6 +28,12 @@
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+
+      <title>Zona Admin</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+	<link rel="stylesheet" href="admin/estilo.css">
    </head>
    <!-- body -->
    <body class="main-layout">
@@ -65,7 +71,7 @@
                                  <li class="nav-item">
                                     <a class="nav-link" href="nosotros.php"> NOSOTROS  </a>
                                  </li> 
-                                 <li class="nav-item active">
+                                 <li class="nav-item">
                                     <a class="nav-link" href="integrantes.php">INTEGRANTES</a>
                                  </li>
                                  <li class="nav-item">
@@ -87,44 +93,64 @@
       <!-- end header inner -->
       <!-- end header -->
       <!-- about -->
-      <div id="about"  class="about">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-9">
-                  <div class="titlepage">
-                     <h2>Jhonatan Jhoel Rivas Cure</h2>
-                     <span></span>
-                     <p>Breve descripción del integrante</p>
-                     <div class="bd-example">
-                        <div class="table-responsive">
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Distancia</th>
-                                <th scope="col">Tiempo</th>
-                                <th scope="col">Ritmo</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>100 metros</td>
-                                <td>33 segundos</td>
-                                <td>5.4</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                  </div>
+      <div class="ourwork">
+          <div class="container">
+             <div class="row">
+                <div class="col-md-12">
+                   <div class="titlepage">
+                      <h2>Zona de Ingreso</h2>
+                   </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-12">
+                <div class="container h-100">
+		<div class="d-flex justify-content-center h-100">
+			<div class="user_card">
+				<div class="d-flex justify-content-center">
+					<div class="brand_logo_container">
+						<img src="images/profile.jpg" class="brand_logo" alt="Logo">
+					</div>
+				</div>
+				<div class="d-flex justify-content-center form_container">
+				
+					<form name="form1" method="post" action="login.php">
+						<div class="input-group mb-3">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-user"></i></span>
+							</div>
+							<input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="username" />
+						</div>
+						<div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-key"></i></span>
+							</div>
+							<input type="password" name="password" id="password" type="password" class="form-control input_pass" placeholder="password" />
+							
+						</div>
+							<div class="d-flex justify-content-center mt-4 login_container">
+                <input type="submit" name="submit" value="Ingresar" class="btn login_btn" />
+				   </div>
+               <div class="d-flex justify-content-center mt-3 login_container">
+               <a href="facial.php" class="btn login_btn">Utilizar FACE ID</a>
                </div>
-               <div class="col-md-3">
-                  <div class="about_img">
-                  <img src="images/jhonatan.jpeg" class="rounded-circle" alt="#"/>
-                  </div>
+               <div class="d-flex justify-content-center mt-3 login_container">
+               <span style="color:#fff;">¿No tienes una cuenta? Regístrate!</span>
                </div>
-            </div>
+               <div class="d-flex justify-content-center mt-3 login_container">
+               <a href="registro.php" class="btn login_btn">Crear Cuenta</a>
+               </div>
+				   <div class="d-flex justify-content-center mt-3 login_container">
+                  <span><a href="index.php" style="color:#fff;">Regresar a Página Principal</a></span>
+               </div>
+					</form>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+                </div>
+             </div>
          </div>
       </div>
       <!-- end about -->

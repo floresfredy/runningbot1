@@ -65,13 +65,13 @@
                                  <li class="nav-item">
                                     <a class="nav-link" href="nosotros.php"> NOSOTROS  </a>
                                  </li> 
-                                 <li class="nav-item active">
+                                 <li class="nav-item">
                                     <a class="nav-link" href="integrantes.php">INTEGRANTES</a>
                                  </li>
                                  <li class="nav-item">
                                     <a class="nav-link" href="componentes.php">COMPONENTES</a>
                                  </li>
-                                 <li class="nav-item">
+                                 <li class="nav-item active">
                                     <a class="nav-link" href="ganadores.php">GANADORES</a>
                                  </li>
                               </ul>
@@ -90,40 +90,10 @@
       <div id="about"  class="about">
          <div class="container">
             <div class="row d_flex">
-               <div class="col-md-9">
-                  <div class="titlepage">
-                     <h2>Jhonatan Jhoel Rivas Cure</h2>
-                     <span></span>
-                     <p>Breve descripción del integrante</p>
-                     <div class="bd-example">
-                        <div class="table-responsive">
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Distancia</th>
-                                <th scope="col">Tiempo</th>
-                                <th scope="col">Ritmo</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row">1</th>
-                                <td>100 metros</td>
-                                <td>33 segundos</td>
-                                <td>5.4</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                  </div>
+               <div class="col-md-12">
+               <img src="images/podio.png" class="rounded-circle" alt="#"/>
                </div>
-               <div class="col-md-3">
-                  <div class="about_img">
-                  <img src="images/jhonatan.jpeg" class="rounded-circle" alt="#"/>
-                  </div>
-               </div>
+              
             </div>
          </div>
       </div>

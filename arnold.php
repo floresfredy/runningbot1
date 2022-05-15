@@ -71,8 +71,11 @@
                                  <li class="nav-item">
                                     <a class="nav-link" href="componentes.php">COMPONENTES</a>
                                  </li>
+                                 <li class="nav-item">
+                                    <a class="nav-link" href="ganadores.php">GANADORES</a>
+                                 </li>
                               </ul>
-                              <div class="sign_btn"><a href="admin/login.php">Iniciar Sesión</a></div>
+                              <div class="sign_btn"><a href="login.php">Iniciar Sesión</a></div>
                            </div>
                         </nav>
                      </div>

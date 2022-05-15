@@ -3,10 +3,11 @@
         margin: 0;
         padding: 0;
         height: 100%;
-        background: #60a3bc !important;
+        background: #60a3bc;
+        background-image: url("https://c.wallhere.com/photos/ce/36/1920x1200_px_General-1197902.jpg!d");
     }
     .user_card {
-        height: 400px;
+        height: 500px;
         width: 350px;
         margin-top: auto;
         margin-bottom: auto;
@@ -16,6 +17,23 @@
         justify-content: center;
         flex-direction: column;
         padding: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border-radius: 5px;
+
+    }
+    .user_card_register {
+        height: 600px;
+        width: 500px;
+        margin-top: auto;
+        margin-bottom: auto;
+        background: rgb(41, 59, 150);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 50px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
