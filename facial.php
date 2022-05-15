@@ -26,6 +26,9 @@
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
       <link href="css/estilos.css" rel="stylesheet" />
+      <script defer src="js/face-api.min.js"></script>
+      <script defer src="js/face.js"></script>
+
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -97,28 +100,31 @@
                 </div>
              </div><br>
 
-            <center> <div class="row">
-               <div class="col-md-12">
-                   
-      <!-- <h3> RECONOCIMIENTO FACIAL </h3> -->
-      
-         <h3> RECONOCIMIENTO FACIAL </h3>
-
-                  <div class="camera">
-                     <video id="video">Video stream not available.</video>
-                     <button id="startbutton">Tomar Foto</button>                   
-                  </div>
-                  <canvas id="canvas"></canvas>
-                  <div class="output">
-                     <img src="" title="hollaa" class="img-fluid" id="photo" alt="La captura de pantalla aparecerá en este cuadro">
-                  </div>   
-                  
-               </div>
-             </div><br></center>
-
-            <center> <div class="row">
-               <div class="col-md-12">
       <!-- <h3>RECONOCIMIENTO FACIAL CON FACE API</h3> -->
+            <div class="contenedor">
+               <div class="row">
+                     <div class="col-sm-12" id="foto">
+                        <div>
+                        <button id="boton">Tomar foto</button>
+                        </div>
+                        <div>
+                        <video muted="muted" id="video"></video>
+                        <canvas id="canvas1" style="display:none;"></canvas>
+                        </div>
+                     </div>         
+               </div>
+               <br>
+               <div class="row">
+                     <div class="col-sm-12" id="carga">
+                     <div><input type="file" id="imageUpload">
+                     <canvas id="canvas"></canvas>
+                     </div> 
+                     </div>
+               </div>
+            </div>
+
+      <!--        <center><div class="row">
+               <div class="col-md-12">
                   <div class="mb-2">
                      <label for="ur1"><strong>Ingresar URL de la imagen:</strong> </label>
                      <input type="text" name="url" id="url" class="form-control">
@@ -132,12 +138,13 @@
                   <button type="submit" class="btn btn-primary mb-3" id="btnAnalizar"><strong>Analizar</strong></button>
                   <div id="resultado"></div>
               </div>
-         </div></center>
-         
+            </div></center>
+      -->
+
+         </div>
       </div>
 
-
-      <!--  footer -->
+      <!--  footer 
       <footer>
             <div class="copyright">
                <div class="container">
@@ -149,9 +156,11 @@
                </div>
             </div>
          </div>
-      </footer>
+      </footer> -->
+      
       <!-- end footer -->
       <!-- Javascript files-->
+ 
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
@@ -161,7 +170,7 @@
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
       <script src="js/custom.js"></script>
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-      <script src="js/face.js"></script>
-   </body>
-</html>
 
+   </body>
+ 
+</html>
