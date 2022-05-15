@@ -101,6 +101,9 @@
                <div class="col-md-12">
                    
       <!-- <h3> RECONOCIMIENTO FACIAL </h3> -->
+      
+         <h3> RECONOCIMIENTO FACIAL </h3>
+
                   <div class="camera">
                      <video id="video">Video stream not available.</video>
                      <button id="startbutton">Tomar Foto</button>                   
