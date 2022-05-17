@@ -110,7 +110,7 @@
                               <tr>
                                 <th scope="row">1</th>
                                 <td>100 metros</td>
-                                <td>30 segundos</td>
+                                <td>31 segundos</td>
                                 <td>5.7</td>
                               </tr>
                             </tbody>
