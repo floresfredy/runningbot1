@@ -99,7 +99,7 @@
                    <div class="titlepage">
                       <h2>Reconocimiento Facial por Edwin Ramos</h2>
                    </div>
-                   <p>Azure Face es capaz de identificar los rostros que aparecen en una imagen devolviendo las coordenados de la ubicación de dicha persona. Además, esta detección implica a su vez extraer datos como atributos faciales, género, edad, emociones o incluso las gafas.</p>
+                   <p>Azure Face es capaz de identificar los rostros que aparecen en una imagen devolviendo las coordenados de la ubicación del rostro de dicha persona. Además, esta detección implica a su vez extraer datos como atributos faciales para poder identificar a los participantes de la carrera.</p>
                 </div>
              </div><br>
 
@@ -120,7 +120,6 @@
                <div class="row">
                      <div class="col-sm-12" id="carga">
                      <div><input type="file" id="imageUpload">
-                     <canvas id="canvas"></canvas>
                      </div> 
                      </div>
                </div>
