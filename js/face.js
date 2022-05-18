@@ -1,3 +1,4 @@
+
 (function () {
 
     function showViewLiveResultButton() {
@@ -81,24 +82,29 @@ Promise.all([
 async function start() {
   const container = document.createElement('div')
   container.style.position = 'relative'
- // container.style.display = 'flex'
- // container.style.justifyContent = 'center'
-  //container.style.alignItems = 'center'
-  //container.style.flexDirection = 'column'
+  container.style.display = 'flex'
+  container.style.justifyContent = 'center'
+  container.style.alignItems = 'center'
   
   document.body.append(container)
   const labeledFaceDescriptors = await loadLabeledImages()
   const faceMatcher = new faceapi.FaceMatcher(labeledFaceDescriptors, 0.6)
   let image
   let canvas
-  document.body.append('Loaded')
+  document.body.append('---')
   imageUpload.addEventListener('change', async () => {
     if (image) image.remove()
     if (canvas) canvas.remove()
     image = await faceapi.bufferToImage(imageUpload.files[0])
+
     container.append(image)
+
     canvas = faceapi.createCanvasFromMedia(image)
+    canvas.style.position = 'absolute'
+   // canvas.style.paddingLeft = '740px'
+
     container.append(canvas)
+
     const displaySize = { width: image.width, height: image.height }
     faceapi.matchDimensions(canvas, displaySize)
     const detections = await faceapi.detectAllFaces(image).withFaceLandmarks().withFaceDescriptors()
@@ -108,26 +114,37 @@ async function start() {
       const box = resizedDetections[i].detection.box
       const drawBox = new faceapi.draw.DrawBox(box, { label: result.toString() })
       drawBox.draw(canvas)
-   //   const html = document.createElement('div');
-   //   html.style.position = 'absolute'
   
-   // let name = result.toString()
- //   if(name.includes('unknow')){
-   //     document.body.append('NO TIENES ACCESO')
-    //} else {
-     //   document.body.append('SI TIENES ACCESO')
-   // }
-         
-   //   <h6>Nombre: ${result[i].toString} buenas </h6>;
-   //   if(result.toString()==='%Captain America%'){
-    //    document.body.append('Hola')
-    //  }
+      let name = result.toString()
+       if(name.includes('unknown')){
+ //      document.body.append('USTED NO TIENE ACCESO')
+       
+    } else {
+
+       let a = document.createElement("a")
+       a.setAttribute("href", "ganadores.php")
+       a.style.marginLeft = '900px'
+       a.style.marginRight = '900px'
+       a.style.backgroundColor = '#1883ba'
+       a.style.border = '2px solid #0016b0'
+       a.style.color = '#ffffff'
+       a.style.position = 'relative'
+       a.style.display = 'flex'
+       a.style.justifyContent = 'center'
+       a.style.alignItems = 'center'
+       let aTexto = document.createTextNode("ACCESO PERMITIDO")
+       a.appendChild(aTexto)
+       document.body.appendChild(a)
+       //if (name) name.remove()
+    }  
+
     } )   
+    
   })
 }
 
 function loadLabeledImages() {
-  const labels = ['Capitan America', 'Edwin', 'Freddy','Hawkeye', 'Jhonatan', 'Leonardo', 'Thor']
+  const labels = ['Arnold', 'Edwin', 'Freddy','Giancarlo', 'Ing. Norma', 'Jhonatan', 'Luis', 'Yaraliz']
   return Promise.all(
     labels.map(async label => {
       const descriptions = []
@@ -142,11 +159,9 @@ function loadLabeledImages() {
 }
 
 function analizar() {
-    const url = document.getElementById('url').value;
-    const urlImagen = document.getElementById('urlImagen');
-    urlImagen.src = url;
-
-    document.getElementById('url').value = "";
+    const Imagen = document.getElementById('imageUpload');
+  
+    document.getElementById('imageUpload').value = "";
 
     let cabecera = new Headers({
         'Content-Type': 'application/json',
@@ -155,40 +170,21 @@ function analizar() {
 
     let objetoInit = {
         method: 'POST',
-        body: JSON.stringify({ url: url }),
+        body: JSON.stringify({Imagen}),
         headers: cabecera
     };
 
-    let request = new Request('https://eastus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age, gender', objetoInit);
+    let request = new Request('https://eastus.api.cognitive.microsoft.com/face/v1.0/detect?returnFaceId=true&returnFaceLandmarks=false&returnFaceAttributes=age', objetoInit);
 
-    fetch(request).then(response => {
-        console.log(response);
+    fetch(request).then(descriptor => {
+        console.log(request);
         if (response.ok) {
-            return response.json();
+            return descriptor.json();
         }
         else {
-            return Promise.reject(new Error(response.statusText));
+            return Promise.reject(new Error(descriptor.statusText));
         }
     
-    }).then(response => {
-        let resultadoAnterior = resultado.children[0];
-        if (resultadoAnterior) {
-            resultadoAnterior.remove();
-        }
-        const html = document.createElement('div');
-        html.innerHTML += `
-        <h6>Edad : ${response[0].faceAttributes.age} años </h6>`;
-        if (response[0].faceAttributes.gender === "female") {
-            html.innerHTML += `
-            <h6>Genero : Femenino </h6>
-            `;
-        } else {
-            html.innerHTML += `
-            <h6>Genero : Masculino </h6>
-            `;
-        }
-        //   <h6>Genero : ${response[0].faceAttributes.gender}</h6>;
-        resultado.appendChild(html);
     }).catch(error => {
         console.log(error);
     });
