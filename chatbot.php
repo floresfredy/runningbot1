@@ -108,7 +108,8 @@
           </div>
        </div>
      
-       <script>
+ 
+         <script>
           window.watsonAssistantChatOptions = {
               integrationID: "6b652c54-cb9f-44e6-bc00-21e266a1b01e", // The ID of this integration.
               region: "us-east", // The region your integration is hosted in.
@@ -121,7 +122,6 @@
             document.head.appendChild(t);
           });
         </script>
-      
       <!--  footer -->
       <footer>
             <div class="copyright">
