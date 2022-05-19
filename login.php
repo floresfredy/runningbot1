@@ -1,3 +1,11 @@
+<?php session_start();
+include('admin/config.php');
+$username = $_POST['userepemf218'];
+$password = $_POST['password'];
+if (isset($_POST['recordar']) && $_POST['recordar'] == 1){
+setcookie('userepemf218', 'danny', time() + 1000);
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -113,7 +121,13 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-				
+				<?php if($_POST['submit']){
+	if($username == $username2 && $password == $password2) {
+		$_SESSION['userepemf218'] = $username;
+		//echo "<SCRIPT LANGUAGE=javascript>window.history.go(-2)</SCRIPT>";
+		echo "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=admin/index.php\">";
+	}
+} ?>
 					<form name="form1" method="post" action="login.php">
 						<div class="input-group mb-3">
 							<div class="input-group-append">
