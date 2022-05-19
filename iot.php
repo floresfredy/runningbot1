@@ -100,26 +100,9 @@
              </div>
              <div class="row">
                 <div class="col-md-12">
-                  <div class="jonu">
-                     <?php echo "hhh";?>
-                  <ul><li><a href="javascript:void(0)" onClick="openFullscreen();"><i class="icon-resize-full icon-large"></i></a> Pantalla Completa, "Esc" para salir.</li></ul>
-                  <iframe id="pantcompleta" width="100%" height="700" src="https://node-red-prueba-1.mybluemix.net/red/#flow/34f1c6594f8c10ec">
-                  </iframe>
-                  <script>
-                     var elem = document.getElementById("pantcompleta");
-                     function openFullscreen() {
-                     if (elem.requestFullscreen) {
-                        elem.requestFullscreen();
-                     } else if (elem.mozRequestFullScreen) { /* Firefox */
-                        elem.mozRequestFullScreen();
-                     } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-                        elem.webkitRequestFullscreen();
-                     } else if (elem.msRequestFullscreen) { /* IE/Edge */
-                        elem.msRequestFullscreen();
-                     }
-                     }
-                  </script>
-                   </div>
+                  <div class="our_box">
+                      <figure><img src="images/iot.png" alt="#"/></figure>
+                  </div>
                 </div>
              </div>
           </div>
