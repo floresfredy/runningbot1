@@ -62,7 +62,7 @@
             enlace.download = "foto_01.jpg";
             enlace.href = foto;
             enlace.click();
-            //Reanudar reproducción
+            //Reanudar reproducción del video
             video.play();
         });
     }
@@ -121,7 +121,7 @@ async function start() {
        
     } else {
 
-       let a = document.createElement("a")
+       let a = document.createElement("a") // Crear un <a>
        a.setAttribute("href", "ganadores.php")
        a.style.marginLeft = '900px'
        a.style.marginRight = '900px'
