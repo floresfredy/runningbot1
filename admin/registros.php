@@ -5,7 +5,7 @@ function get($id){
     $curl = curl_init();
     curl_setopt_array($curl, [
         CURLOPT_RETURNTRANSFER => true, //or 1
-        CURLOPT_URL => 'https://apikey-v2-2v218ufnyicgtk8vu1v0vbwjb6236g53t22rurcr5d53:f0e2ce87d5ba606675d8e72e59f60da2@ff8b0397-8bc8-4ec2-bb15-a29dfbd20c6b-bluemix.cloudantnosqldb.appdomain.cloud/mydb/'.$id,
+        CURLOPT_URL => 'https://f3e85e45.us-south.apigw.appdomain.cloud/api-leer-docs/action-leer-docs?docid='.$id,
         CURLOPT_HTTPHEADER => array ("Content-Type: application/json"),
     ]);
     // Send the request & save response to $resp
