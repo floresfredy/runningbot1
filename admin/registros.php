@@ -115,9 +115,19 @@ $res = get('_all_docs');
 $a = $res['rows'];
 html1();
 //var_dump($a);
+//$calc=1;
 for($i = 0; $i < count($a); $i++){
     $doc = get($a[$i]['id']);
     display_row($doc['_rev'],$doc['_id'],$doc['nombre'],$doc['distancia'],$doc['tiempo'],$doc['ritmo']);
+    
+    
+    /*if($doc['tiempo'] > $calc)
+    {
+        $ganador = $doc['tiempo'];
+        $calc = $doc['tiempo'];
+    }*/
+    
 }
+//echo $ganador;
 html2();
 ?>

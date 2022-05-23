@@ -1,3 +1,22 @@
+<?php
+function get($id){
+    // Get cURL resource
+    $curl = curl_init();
+    curl_setopt_array($curl, [
+        CURLOPT_RETURNTRANSFER => true, //or 1
+        CURLOPT_URL => 'https://f3e85e45.us-south.apigw.appdomain.cloud/api-leer-docs/action-leer-docs?docid='.$id,
+        CURLOPT_HTTPHEADER => array ("Content-Type: application/json"),
+    ]);
+    // Send the request & save response to $resp
+    $resp = curl_exec($curl);
+    $res= json_decode($resp,true); //result is associative array php
+    curl_close($curl);
+    return $res;
+  }
+  
+  
+  function html1(){
+    $var ='
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -93,7 +112,27 @@
                <div class="col-md-12">
                <img src="images/podio.png" class="rounded-circle" alt="#"/>
                </div>
-              
+               <table id="example" class="table table-striped table-bordered" style="width:100%; background-color:#fff">
+               <thead>
+                   <tr>
+                       <th>Nombre</th>
+                       <th>Distancia</th>
+                       <th>Tiempo</th>
+                       <th>Ritmo</th>
+                   </tr>
+               </thead>
+               <tbody>';
+               echo $var;
+             }
+              function display_row($rev,$id,$n,$d,$t,$r){
+                $m = "<tr><td>$n</td><td>$d</td><td>$t</td><td>$r</td></tr>";
+                echo $m;
+              }
+              function html2(){
+               $end = '
+                   </tbody>
+               
+           </table>
             </div>
          </div>
       </div>
@@ -125,4 +164,26 @@
       <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
    </body>
 </html>
-
+';
+echo $end;
+}
+$res = get('_all_docs');
+$a = $res['rows'];
+html1();
+//var_dump($a);
+$calc=1;
+for($i = 0; $i < count($a); $i++){
+    $doc = get($a[$i]['id']);
+    display_row($doc['_rev'],$doc['_id'],$doc['nombre'],$doc['distancia'],$doc['tiempo'],$doc['ritmo']);
+    
+    
+    if($doc['tiempo'] > $calc)
+    {
+        $ganador = $doc['tiempo'];
+        $calc = $doc['tiempo'];
+    }
+    
+}
+echo "El ganador es: ".$ganador;
+html2();
+?>

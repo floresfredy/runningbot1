@@ -1,22 +1,32 @@
 <?php
-function deldoc($db,$id,$rev){
-  $curl = curl_init();
-  curl_setopt_array($curl, [
-      CURLOPT_RETURNTRANSFER => true, //or 1
-      CURLOPT_URL => 'https://apikey-v2-2v218ufnyicgtk8vu1v0vbwjb6236g53t22rurcr5d53:f0e2ce87d5ba606675d8e72e59f60da2@ff8b0397-8bc8-4ec2-bb15-a29dfbd20c6b-bluemix.cloudantnosqldb.appdomain.cloud/'.$db.'/'.$id.'?rev='.$rev,
-      CURLOPT_CUSTOMREQUEST => 'DELETE'
-  ]);
-  curl_exec($curl);
-  curl_close($curl);
+$cod = $_GET["doc_id"];
+$rev = $_GET["doc_rev"];
+$curl = curl_init();
+
+curl_setopt_array($curl, array(
+  CURLOPT_URL => "https://f3e85e45.us-south.apigw.appdomain.cloud/api-eliminar/acceso-eliminar?docid=$cod&docrev=$rev",
+  CURLOPT_RETURNTRANSFER => true,
+  CURLOPT_ENCODING => "",
+  CURLOPT_MAXREDIRS => 10,
+  CURLOPT_TIMEOUT => 30,
+  CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+  CURLOPT_CUSTOMREQUEST => "DELETE",
+  CURLOPT_POSTFIELDS => "{\"id\":4898116048257024}",
+  CURLOPT_HTTPHEADER => array(
+    "accept: application/json",
+    "content-type: application/json"
+  ),
+));
+
+$response = curl_exec($curl);
+$err = curl_error($curl);
+
+curl_close($curl);
+
+if ($err) {
+  echo "cURL Error #:" . $err;
+} else {
+  echo "Registro Eliminado. Redirigiendo...<SCRIPT LANGUAGE=javascript>window.history.go(-1)</SCRIPT>";
 }
-$docid = $_GET["doc_id"];
-$docrev = $_GET["doc_rev"];
-deldoc('mydb',$docid,$docrev);
+?>
 
-
-
-
-$var = "Registro Eliminado. Redirigiendo...<SCRIPT LANGUAGE=javascript>window.history.go(-1)</SCRIPT>";
-echo $var;
-
- ?>
