@@ -109,7 +109,7 @@ function get($id){
       <div id="about"  class="about">
          <div class="container">
             <div class="row d_flex">
-               <div class="col-md-12">
+               <div class="col-md-4">
                <img src="images/podio.png" class="rounded-circle" alt="#"/>
                </div>
                <table id="example" class="table table-striped table-bordered" style="width:100%; background-color:#fff">
