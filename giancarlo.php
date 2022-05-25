@@ -102,17 +102,17 @@
                             <thead>
                               <tr>
                                 <th scope="col">#</th>
+                                <th scope="col">DNI</th>
                                 <th scope="col">Peso</th>
-                                <th scope="col">Edad</th>
                                 <th scope="col">Talla</th>
                               </tr>
                             </thead>
                             <tbody>
                               <tr>
                                 <th scope="row">1</th>
-                                <td>72</td>
-                                <td>27</td>
-                                <td>172</td>
+                                <td>70484611</td>
+                                <td>75</td>
+                                <td>1,75</td>
                               </tr>
                             </tbody>
                           </table>
@@ -130,7 +130,7 @@
                                 <th scope="col">#</th>
                                 <th scope="col">Distancia</th>
                                 <th scope="col">Tiempo</th>
-                                <th scope="col">Ritmo</th>
+                                <th scope="col">Fecha</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -138,25 +138,25 @@
                                 <th scope="row">1</th>
                                 <td>100 metros</td>
                                 <td>32 segundos</td>
-                                <td>5.1</td>
+                                <td>12/05/2022</td>
                               </tr>
                               <tr>
                                 <th scope="row">1</th>
                                 <td>100 metros</td>
                                 <td>30 segundos</td>
-                                <td>5.4</td>
+                                <td>13/05/2022</td>
                               </tr>
                               <tr>
                                 <th scope="row">1</th>
                                 <td>100 metros</td>
                                 <td>37 segundos</td>
-                                <td>5.2</td>
+                                <td>14/05/2022</td>
                               </tr>
                               <tr>
                                 <th scope="row">1</th>
                                 <td>100 metros</td>
                                 <td>30 segundos</td>
-                                <td>5</td>
+                                <td>14/05/2022</td>
                               </tr>
                             </tbody>
                           </table>

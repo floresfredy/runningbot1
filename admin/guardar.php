@@ -3,11 +3,11 @@ include('sesion.php');
 // var_dump($_POST);
 $user = new stdClass;
 $user->tipo = 'usuario';
-$user->nombre = $_POST["dni"];
+$user->dni = $_POST["dni"];
 $user->nombre = $_POST["nombre"];
 $user->distancia = $_POST["distancia"];
 $user->tiempo = $_POST["tiempo"];
-$user->ritmo = $_POST["ritmo"];
+$user->fecha = $_POST["fecha"];
  //echo json_encode($user);
 
 $curl = curl_init();

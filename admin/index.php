@@ -38,7 +38,7 @@ include('sesion.php');
     </div>
 	<div class="row">
         <div class="col-md-12 form-group">
-            <input id="ritmo" name="ritmo" type="text" required placeholder="Ingrese ritmo" class="form-control">
+            <input id="fecha" name="fecha" type="text" required placeholder="Ingrese fecha" class="form-control">
         </div>
     </div>
     <div class="row">
