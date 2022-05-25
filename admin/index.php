@@ -18,6 +18,11 @@ include('sesion.php');
 	<form action="guardar.php" method="post">
     <div class="row">
         <div class="col-md-12 form-group">
+            <input id="dni" name="dni" type="text" required class="form-control" placeholder="DNI">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
             <input id="nombre" name="nombre" type="text" required class="form-control" placeholder="Nombre">
         </div>
     </div>

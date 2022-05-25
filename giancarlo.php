@@ -93,8 +93,35 @@
                <div class="col-md-9">
                   <div class="titlepage">
                      <h2>Giancarlo Ayala Cárdenas</h2>
+                     <!--primera tabla-->
                      <span></span>
-                     <p>Breve descripción del integrante</p>
+                     <p>Estado Físico</p>
+                     <div class="bd-example">
+                        <div class="table-responsive">
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Peso</th>
+                                <th scope="col">Edad</th>
+                                <th scope="col">Talla</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>72</td>
+                                <td>27</td>
+                                <td>172</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                     </div>
+                     <!--fin primera tabla-->
+                     <!--segunda tabla-->
+                     <span></span>
+                     <p>Carreras Realizadas</p>
                      <div class="bd-example">
                         <div class="table-responsive">
                           <table class="table">
@@ -113,16 +140,76 @@
                                 <td>32 segundos</td>
                                 <td>5.1</td>
                               </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>100 metros</td>
+                                <td>30 segundos</td>
+                                <td>5.4</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>100 metros</td>
+                                <td>37 segundos</td>
+                                <td>5.2</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>100 metros</td>
+                                <td>30 segundos</td>
+                                <td>5</td>
+                              </tr>
                             </tbody>
                           </table>
                         </div>
-                      </div>
+                     </div>
+                     <!--fin segunda tabla-->
                   </div>
                </div>
                <div class="col-md-3">
                   <div class="about_img">
                   <img src="images/giancarlo.jpeg" class="rounded-circle" alt="#"/>
-                  </div>
+                  </div><br/>
+                     <p>Datos del estudiante</p><br/>
+                     <div class="bd-example">
+                        <div class="table-responsive">
+                          <table class="table">
+                            <tbody>
+                              <tr>
+                                <th><b>DNI: </th>
+                                <td>70484611</td>
+                              </tr>
+                              <tr>
+                                <th><b>Nombres: </th>
+                                <td>Giancarlo Alexander </td>
+                              </tr>
+                              <tr>
+                                <th><b>Ape. Paterno: </th>
+                                <td>Ayala</td>
+                              </tr>
+                              <tr>
+                                <th><b>Ape. Materno: </th>
+                                <td>Cardenas</td>
+                              </tr>
+                              <tr>
+                                <th><b>Género: </th>
+                                <td>Masculino</td>
+                              </tr>
+                              <tr>
+                                <th><b>Correo </th>
+                                <td>giancarlo_ayala@usmp.pe</td>
+                              </tr>
+                              <tr>
+                                <th><b>Fecha Nac.: </th>
+                                <td>12/08/1992</td>
+                              </tr>
+                              <tr>
+                                <th><b>Celular: </th>
+                                <td> 961 288 930</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                     </div>
                </div>
             </div>
          </div>

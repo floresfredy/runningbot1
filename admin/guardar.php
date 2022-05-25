@@ -3,6 +3,7 @@ include('sesion.php');
 // var_dump($_POST);
 $user = new stdClass;
 $user->tipo = 'usuario';
+$user->nombre = $_POST["dni"];
 $user->nombre = $_POST["nombre"];
 $user->distancia = $_POST["distancia"];
 $user->tiempo = $_POST["tiempo"];
@@ -12,7 +13,7 @@ $user->ritmo = $_POST["ritmo"];
 $curl = curl_init();
 // curl options
 $options = array(
-CURLOPT_URL => 'https://apikey-v2-2v218ufnyicgtk8vu1v0vbwjb6236g53t22rurcr5d53:f0e2ce87d5ba606675d8e72e59f60da2@ff8b0397-8bc8-4ec2-bb15-a29dfbd20c6b-bluemix.cloudantnosqldb.appdomain.cloud/mydb',
+CURLOPT_URL => 'https://apikey-v2-2v218ufnyicgtk8vu1v0vbwjb6236g53t22rurcr5d53:f0e2ce87d5ba606675d8e72e59f60da2@ff8b0397-8bc8-4ec2-bb15-a29dfbd20c6b-bluemix.cloudantnosqldb.appdomain.cloud/carrera',
 CURLOPT_POST => 1,
 CURLOPT_POSTFIELDS => json_encode($user),
 CURLOPT_HTTPHEADER => array ("Content-Type: application/json"),
