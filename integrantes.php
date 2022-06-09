@@ -1,3 +1,5 @@
+<?php session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
    <head>
@@ -75,7 +77,24 @@
                                     <a class="nav-link" href="ganadores.php">GANADORES</a>
                                  </li>
                               </ul>
-                              <div class="sign_btn"><a href="login.php">Iniciar Sesión</a></div>
+                              <?php if ((isset($_SESSION['usuarioalumno'])) && ($_SESSION['usuarioalumno'] != ""))
+                                 {
+                                    
+                                    echo "<div class='dropdown'>
+                                    <button class='btn btn-light dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                                    <img src='images/avatar.png' height ='32' width='32' /> Hola ".$_SESSION['usuarioalumno']."
+                                    </button>
+                                    <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+                                      <a class='dropdown-item' href='usuario.php?user=".$_SESSION['usuarioalumno']."'>Ver Perfil</a>
+                                      <a class='dropdown-item' href='ganadores.php'>Ver Ganadores</a>
+                                      <a class='dropdown-item' href='cerrar.php'>Cerrar Sesión</a>
+                                    </div>
+                                  </div>";
+                                 }
+                                    else
+                                 {
+                              ?>
+                              <button class="btn btn-light" type="button"><a href="login.php"><img src="images/avatar.png" height ="32" width="32" /> Iniciar Sesión</a></button><?php }?>
                            </div>
                         </nav>
                      </div>
@@ -103,7 +122,7 @@
                         <img src="images/yaraliz.png" class="rounded-circle" alt="#"/>
                            <h3>Yaraliz Mary Gomez Medina</h3>
                            <strong>QA</strong>
-                           <a class="read_more" href="yaraliz.php">Ver Info</a>
+                           <a class="read_more" href="usuario.php?user=yaraliz">Ver Info</a>
                      </div>
                      <!-- fin integrante -->
                    </div>
@@ -115,7 +134,7 @@
                         <img src="images/jhonatan.jpeg" class="rounded-circle" alt="#"/>
                            <h3>Jhonatan Jhoel Rivas Cure</h3>
                            <strong>LIDER</strong>
-                           <a class="read_more" href="jhonatan.php">Ver Info</a>
+                           <a class="read_more" href="usuario.php?user=jhonatan">Ver Info</a>
                      </div>
                      <!-- fin integrante -->
                    </div>
@@ -127,7 +146,7 @@
                         <img src="images/freddy.png" class="rounded-circle" alt="#"/>
                            <h3>Freddy Jesus Flores Flores</h3>
                            <strong>Full Stack IBM Cloud Página web Aplicación</strong>
-                           <a class="read_more" href="freddy.php">Ver Info</a>
+                           <a class="read_more" href="usuario.php?user=freddy">Ver Info</a>
                      </div>
                      <!-- fin integrante -->
                    </div>
@@ -139,7 +158,7 @@
                         <img src="images/edwin.jpg" class="rounded-circle" alt="#"/>
                            <h3>Edwin Michael Ramos Cabrera</h3>
                            <strong>Full Stack IBM Cloud Reconocimiento Facial</strong>
-                           <a class="read_more" href="edwin.php">Ver Info</a>
+                           <a class="read_more" href="usuario.php?user=edwin">Ver Info</a>
                      </div>
                      <!-- fin integrante -->
                    </div>
@@ -151,7 +170,7 @@
                         <img src="images/giancarlo.jpeg" class="rounded-circle" alt="#"/>
                            <h3>Giancarlo Ayala Cárdenas</h3>
                            <strong>Full Stack IBM Cloud IOT</strong>
-                           <a class="read_more" href="giancarlo.php">Ver Info</a>
+                           <a class="read_more" href="usuario.php?user=giancarlo">Ver Info</a>
                      </div>
                      <!-- fin integrante -->
                    </div>
@@ -163,7 +182,7 @@
                         <img src="images/arnold.jpeg" class="rounded-circle" alt="#"/>
                            <h3>Arnold Guerrero Galarza</h3>
                            <strong>Full Stack IBM Cloud NPL Chatbot</strong>
-                           <a class="read_more" href="arnold.php">Ver Info</a>
+                           <a class="read_more" href="usuario.php?user=arnold">Ver Info</a>
                      </div>
                      <!-- fin integrante -->
                    </div>
@@ -175,7 +194,7 @@
                         <img src="images/luis.jpeg" class="rounded-circle" alt="#"/>
                            <h3>Luis Alberto Raico Janampa</h3>
                            <strong>Full Stack IBM Cloud Realidad virtual </strong>
-                           <a class="read_more" href="luis.php">Ver Info</a>
+                           <a class="read_more" href="usuario.php?user=luis">Ver Info</a>
                      </div>
                      <!-- fin integrante -->
                    </div>

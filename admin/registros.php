@@ -70,8 +70,15 @@ function get($id){
         echo $var;
       }
        function display_row($rev,$id,$n,$d,$t,$r){
-         $m = "<tr><td>$n</td><td>$d</td><td>$t</td><td>$r</td><td><a href='eliminar.php?doc_id=$id&doc_rev=$rev' onclick='return confirmar()'><i class='icon-trash'></i> Eliminar</a></td></tr>";
-         echo $m;
+           $dnico="Edwin";
+           if($n==$dnico){
+            $m = "<tr><td>$n</td><td>$d</td><td>$t</td><td>$r</td><td><a href='eliminar.php?doc_id=$id&doc_rev=$rev' onclick='return confirmar()'><i class='icon-trash'></i> Eliminar</a></td></tr>";
+            
+            echo $m;
+            echo $n;
+           }
+           
+         
        }
        function html2(){
         $end = '

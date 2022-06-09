@@ -1,4 +1,7 @@
 <?php
+include('sesion.php');
+?>
+<?php
 function get($id){
     // Get cURL resource
     $curl = curl_init();

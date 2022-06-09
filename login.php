@@ -1,10 +1,4 @@
 <?php session_start();
-include('admin/config.php');
-$username = $_POST['userepemf218'];
-$password = $_POST['password'];
-if (isset($_POST['recordar']) && $_POST['recordar'] == 1){
-setcookie('userepemf218', 'danny', time() + 1000);
-}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -89,7 +83,24 @@ setcookie('userepemf218', 'danny', time() + 1000);
                                     <a class="nav-link" href="ganadores.php">GANADORES</a>
                                  </li>
                               </ul>
-                              <div class="sign_btn"><a href="login.php">Iniciar Sesión</a></div>
+                              <?php if ((isset($_SESSION['usuarioalumno'])) && ($_SESSION['usuarioalumno'] != ""))
+                                 {
+                                    
+                                    echo "<div class='dropdown'>
+                                    <button class='btn btn-light dropdown-toggle' type='button' id='dropdownMenuButton' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+                                    <img src='images/avatar.png' height ='32' width='32' /> Hola ".$_SESSION['usuarioalumno']."
+                                    </button>
+                                    <div class='dropdown-menu' aria-labelledby='dropdownMenuButton'>
+                                      <a class='dropdown-item' href='usuario.php?user=".$_SESSION['usuarioalumno']."'>Ver Perfil</a>
+                                      <a class='dropdown-item' href='ganadores.php'>Ver Ganadores</a>
+                                      <a class='dropdown-item' href='cerrar.php'>Cerrar Sesión</a>
+                                    </div>
+                                  </div>";
+                                 }
+                                    else
+                                 {
+                              ?>
+                              <button class="btn btn-light" type="button"><a href="login.php"><img src="images/avatar.png" height ="32" width="32" /> Iniciar Sesión</a></button><?php }?>
                            </div>
                         </nav>
                      </div>
@@ -121,25 +132,18 @@ setcookie('userepemf218', 'danny', time() + 1000);
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-				<?php if($_POST['submit']){
-	if($username == $username2 && $password == $password2) {
-		$_SESSION['userepemf218'] = $username;
-		//echo "<SCRIPT LANGUAGE=javascript>window.history.go(-2)</SCRIPT>";
-		echo "<META HTTP-EQUIV=\"refresh\" CONTENT=\"0; URL=admin/index.php\">";
-	}
-} ?>
-					<form name="form1" method="post" action="login.php">
+					<form name="form1" method="post" action="login-ok.php">
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input name="userepemf218" id="username" type="text" class="form-control input_user" placeholder="username" />
+							<input name="alumno" id="username" type="text" class="form-control input_user" placeholder="username" />
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input type="password" name="password" id="password" type="password" class="form-control input_pass" placeholder="password" />
+							<input type="password" name="pass" id="password" type="password" class="form-control input_pass" placeholder="password" />
 							
 						</div>
 							<div class="d-flex justify-content-center mt-4 login_container">
