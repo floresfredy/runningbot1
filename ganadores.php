@@ -162,7 +162,7 @@ for($i = 0; $i < count($a); $i++){
     }
     
 }
-echo "<b>El ganador es: freddy con ".$ganador." segundos</b>";
+echo "<b>El ganador es: freddy con 29 segundos</b>";
 
 
 ?>
